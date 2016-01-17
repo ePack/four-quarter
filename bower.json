@@ -1,0 +1,25 @@
+{
+  "name": "epack-four-quarter",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ePack/four-quarter",
+  "authors": [
+    "Maik Hummel <maik@eclip.io>"
+  ],
+  "description": "",
+  "main": "epack-four-quarter.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-styles": "polymerElements/paper-styles#~1.1.2",
+    "iron-flex-layout": "polymerElements/iron-flex-layout#~1.2.2",
+    "iron-selector": "polymerElements/iron-selector#~1.0.8",
+    "paper-button": "polymerElements/paper-button#~1.0.11"
+  }
+}

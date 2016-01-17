@@ -1,0 +1,63 @@
+<link rel="import" href="../../paper-styles/color.html">
+<link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../../iron-selector/iron-selector.html">
+<link rel="import" href="../../paper-button/paper-button.html">
+
+<dom-module id="epack-four-quarter">
+  <template>
+
+    <style is="custom-style">
+      .item {
+        width: 50%;
+        height: 50%;
+        box-sizing: border-box;
+        float: left;
+      }
+
+      .item:nth-of-type(2n+1) {
+        border-right: 1px solid darkgray;
+      }
+
+      .item:nth-of-type(1),
+      .item:nth-of-type(2) {
+        border-bottom: 1px solid darkgray;
+      }
+
+      paper-button {
+        border-radius: 0;
+        -webkit-transition: background-color 1s, color 0.2s !important;
+        transition: background-color 1s, color 0.2s !important;
+        text-transform: capitalize;
+        margin: 0;
+      }
+
+      .item.iron-selected > paper-button {
+        background-color: var(--google-blue-500);
+        color: #fff;
+      }
+    </style>
+
+    <div id="choices" class="fit horizontal wrap layout">
+      <iron-selector selected="{{value}}" class="fit">
+        <template is="dom-repeat" items="{{options}}">
+          <div class="item horizontal layout">
+            <paper-button class="flex horizontal center-center layout">{{item}}</paper-button>
+          </div>
+        </template>
+      </iron-selector>
+
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'epack-four-quarter',
+
+      properties: {
+        options: Array,
+        value: Number
+      }
+    });
+  </script>
+</dom-module>
